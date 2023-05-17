@@ -1,12 +1,12 @@
 import { useGLTF, useScroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import gsap from "gsap";
-import React, {useLayoutEffect, useRef, useState} from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 
 export const FLOOR_HEIGHT = 2.3;
 export const NB_FLOORS = 3;
 export function Office(props) {
-    const { scene } = useGLTF("./scene.gltf");
+    const gltf = useGLTF("./scene.gltf");
     const ref = useRef();
     const tl = useRef();
     const scroll = useScroll();
@@ -17,17 +17,6 @@ export function Office(props) {
 
     useLayoutEffect(() => {
         tl.current = gsap.timeline();
-
-        // VERTICAL ANIMATION
-        /*tl.current.to(
-            ref.current.position,
-            {
-                duration: 1,
-                y: -FLOOR_HEIGHT * (NB_FLOORS - 1),
-            },
-            0
-        );*/
-
         // Office Rotation
         tl.current.to(
             ref.current.rotation,
@@ -63,6 +52,15 @@ export function Office(props) {
         );
     }, []);
 
+    useLayoutEffect(() => {
+        gltf.scene.traverse((object) => {
+            if (object.isMesh) {
+                object.material.color.setStyle(props.color); // Utiliser la couleur des props
+            }
+        });
+    }, [gltf, props.color]);
+
+
     return (
         <group
             {...props}
@@ -71,7 +69,7 @@ export function Office(props) {
             position={[0.5, -1, -1]}
             rotation={[0, -Math.PI / 3, 0]}
         >
-            <primitive object={scene} />
+            <primitive object={gltf.scene} />
         </group>
     );
 }
