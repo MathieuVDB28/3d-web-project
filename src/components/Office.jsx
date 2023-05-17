@@ -60,7 +60,6 @@ export function Office(props) {
         });
     }, [gltf, props.color]);
 
-
     return (
         <group
             {...props}

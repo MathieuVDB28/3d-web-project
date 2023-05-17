@@ -6,11 +6,11 @@ import { Office } from "./Office";
 
 const colors = [
     '#000000',
-    '#ff0000',
-    '#0000ff',
-    '#ffff00',
-    '#ff00ff',
-    '#00ffff',
+    '#4B2727',
+    '#27304B',
+    '#2A4B27',
+    '#3F274B',
+    '#4B3927',
 ];
 const Section = (props) => {
     return (
@@ -93,9 +93,7 @@ export const Overlay = () => {
                         </Flex>
                     </p>
                     <button className="bg-black text-white font-bold p-2 rounded-lg mt-3" onClick={handleBuyClick}>Acheter</button>
-
                 </Section>
-
                 <Office color={currentColor} />
             </div>
         </Scroll>
