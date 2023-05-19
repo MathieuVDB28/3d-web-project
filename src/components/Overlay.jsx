@@ -50,10 +50,34 @@ export const Overlay = () => {
 
     return (
         <Scroll html>
-            <img src="https://stickers-shop.re/thumb.php?zc=3&src=/visu/view/v/preview/logo-ds3-2.png&fl=none&w=395&h=395&f=5,%200%20,0%20,0%20,0" className="fixed w-32 object-cover" />
+            <nav className="bg-transparent border-gray-200 dark:bg-gray-900">
+                <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                    <a href="#" className="flex items-center">
+                        <img src="https://stickers-shop.re/thumb.php?zc=3&src=/visu/view/v/preview/logo-ds3-2.png&fl=none&w=395&h=395&f=5,%200%20,0%20,0%20,0://flowbite.com/docs/images/logo.svg" className="h-8 mr-3" alt="Flowbite Logo" />
+                        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">DS AUTOMOBILES</span>
+                    </a>
+                    <button data-collapse-toggle="navbar-default" type="button" className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+                        <span className="sr-only">Open main menu</span>
+                        <svg className="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+                    </button>
+                    <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+                        <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg  md:flex-row md:space-x-8 md:mt-0 md:border-0 ">
+                            <li>
+                                <a href="#" className="block py-2 pl-3 pr-4 text-white  rounded md:bg-transparent  md:p-0 dark:text-white " aria-current="page">Accueil</a>
+                            </li>
+                            <li>
+                                <a href="#" className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
+                            </li>
+                            <li>
+                                <a href="#" className="block py-2 pl-3 pr-4 text-white rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Personnalisation</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
             <div className="w-screen">
                 <Section opacity={opacityFirstSection}>
-                    <h1 className="font-semibold font-serif text-2xl">
+                    <h1 className="font-semibold font-serif text-2xl" id="first-section">
                         🚘 Bienvenue sur CustomCars
                     </h1>
                     <p className="text-gray-500 mt-3">Ici, personnalisé votre voiture pour qu'elle vous ressemble ! </p>
@@ -63,7 +87,7 @@ export const Overlay = () => {
                     <p className="animate-bounce  mt-6">↓</p>
                 </Section>
                 <Section right opacity={opacitySecondSection}>
-                    <h1 className="text-white font-semibold font-serif text-2xl">
+                    <h1 className="text-white font-semibold font-serif text-2xl" id="second-section">
                         🔥 De nombreuses couleurs sont disponibles !
                     </h1>
                     <p className="text-white">Ne perdez pas une minute de plus, explorez notre gamme de couleurs, laissez libre cours à votre créativité et prenez rendez-vous dès maintenant pour vivre une expérience automobile exceptionnelle.</p>
@@ -71,8 +95,8 @@ export const Overlay = () => {
                     <p className="text-white mt-3"><b>Faites-vous plaisir !</b></p>
                     <p className="text-white animate-bounce  mt-6">↓</p>
                 </Section>
-                <Section>
-                    <h1 className="font-semibold font-serif text-2xl mb-3">
+                <Section  opacity={opacityLastSection}>
+                    <h1 className="font-semibold font-serif text-2xl mb-3" id="third-section">
                         🎨 Personnalisation :
                     </h1>
                     <p>Choississez la couleur qui vous correspond le plus, visualisé la sur votre voiture, et passez commande !</p>
@@ -93,7 +117,7 @@ export const Overlay = () => {
                             ))}
                         </Flex>
                     </p>
-                    <button className="bg-black text-white font-bold p-2 rounded mt-3" onClick={handleBuyClick}>Acheter</button>
+                    <button className="bg-black text-white font-bold p-2 rounded-full mt-3" onClick={handleBuyClick}>Acheter</button>
                 </Section>
                 <Office color={currentColor} />
             </div>

@@ -17,19 +17,19 @@ export function Office(props) {
 
     useLayoutEffect(() => {
         tl.current = gsap.timeline();
-        // Office Rotation
+        // Car Rotation
         tl.current.to(
             ref.current.rotation,
-            { duration: 1, x: 0, y: Math.PI / 6, z: 0 },
+            { duration: 1, x: 0, y: 0, z: 0 },
             0
         );
         tl.current.to(
             ref.current.rotation,
-            { duration: 1, x: 0, y: -Math.PI / 6, z: 0 },
+            { duration: 1, x: 0, y: 0, z: 0 },
             1
         );
 
-        // Office movement
+        // Car movement
         tl.current.to(
             ref.current.position,
             {
