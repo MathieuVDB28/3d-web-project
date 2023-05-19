@@ -32,6 +32,4 @@ Projet uniquement front
 ```
 ## Demo
 
-Insert gif or link to demo
-
 ![Landing page](/public/screen.png)
