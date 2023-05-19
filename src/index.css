@@ -67,9 +67,7 @@ model-viewer {
     background-position: 12px 50%;
     background-color: #fff;
     left: 50%;
-    transform: translateX(-50%);
     white-space: nowrap;
-    bottom: 16px;
     padding: 0px 16px 0px 40px;
     font-family: Roboto Regular, Helvetica Neue, sans-serif;
     font-size: 14px;
@@ -78,6 +76,7 @@ model-viewer {
     line-height: 36px;
     border-radius: 18px;
     border: 1px solid #DADCE0;
+    margin-top: 20px;
 }
 
 #ar-button:active {
