@@ -2,6 +2,7 @@ import { OrbitControls, ScrollControls } from "@react-three/drei";
 import { Office } from "./Office";
 import { Overlay } from "./Overlay";
 import {useState} from "react";
+import {BrowserRouter} from "react-router-dom";
 
 export const Experience = () => {
     const [color, setColor] = useState("#000000");
@@ -20,7 +21,7 @@ export const Experience = () => {
                 enableZoom={false}
             />
             <ScrollControls pages={3} damping={0.25}>
-                <Overlay />
+                    <Overlay />
                 <Office color={color} />
             </ScrollControls>
         </>

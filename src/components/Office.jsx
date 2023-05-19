@@ -34,7 +34,7 @@ export function Office(props) {
             ref.current.position,
             {
                 duration: 1,
-                x: -1,
+                x: -3,
                 y: -1,
                 z: -1,
             },
