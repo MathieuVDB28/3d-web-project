@@ -23,7 +23,7 @@ const Section = (props) => {
         >
             <div className="w-1/2 flex items-center justify-center">
                 <div className="max-w-sm w-full">
-                    <div className="bg-white  rounded-lg px-8 py-12">
+                    <div className="px-8 py-12">
                         {props.children}
                     </div>
                 </div>
@@ -50,10 +50,11 @@ export const Overlay = () => {
 
     return (
         <Scroll html>
-            <div class="w-screen">
+            <img src="https://stickers-shop.re/thumb.php?zc=3&src=/visu/view/v/preview/logo-ds3-2.png&fl=none&w=395&h=395&f=5,%200%20,0%20,0%20,0" className="fixed w-32 object-cover" />
+            <div className="w-screen">
                 <Section opacity={opacityFirstSection}>
                     <h1 className="font-semibold font-serif text-2xl">
-                       🚘 Bienvenue sur CustomCars
+                        🚘 Bienvenue sur CustomCars
                     </h1>
                     <p className="text-gray-500 mt-3">Ici, personnalisé votre voiture pour qu'elle vous ressemble ! </p>
                     <p className="mt-3">Découvrez notre incroyable modèle de voiture, conçu pour offrir une expérience de personnalisation unique. </p>
@@ -62,17 +63,17 @@ export const Overlay = () => {
                     <p className="animate-bounce  mt-6">↓</p>
                 </Section>
                 <Section right opacity={opacitySecondSection}>
-                    <h1 className="font-semibold font-serif text-2xl">
+                    <h1 className="text-white font-semibold font-serif text-2xl">
                         🔥 De nombreuses couleurs sont disponibles !
                     </h1>
-                    <p>Ne perdez pas une minute de plus, explorez notre gamme de couleurs, laissez libre cours à votre créativité et prenez rendez-vous dès maintenant pour vivre une expérience automobile exceptionnelle.</p>
-                    <p className="mt-3">Scrollez vers le bas pour vous rendre sur la partie personnalisation.</p>
-                    <p className="mt-3"><b>Faites-vous plaisir !</b></p>
-                    <p className="animate-bounce  mt-6">↓</p>
+                    <p className="text-white">Ne perdez pas une minute de plus, explorez notre gamme de couleurs, laissez libre cours à votre créativité et prenez rendez-vous dès maintenant pour vivre une expérience automobile exceptionnelle.</p>
+                    <p className="text-white mt-3">Scrollez vers le bas pour vous rendre sur la partie personnalisation.</p>
+                    <p className="text-white mt-3"><b>Faites-vous plaisir !</b></p>
+                    <p className="text-white animate-bounce  mt-6">↓</p>
                 </Section>
-                <Section opacity={opacityLastSection}>
+                <Section>
                     <h1 className="font-semibold font-serif text-2xl mb-3">
-                       🎨 Personnalisation :
+                        🎨 Personnalisation :
                     </h1>
                     <p>Choississez la couleur qui vous correspond le plus, visualisé la sur votre voiture, et passez commande !</p>
                     <p className="text-gray-500 mt-5">
@@ -92,7 +93,7 @@ export const Overlay = () => {
                             ))}
                         </Flex>
                     </p>
-                    <button className="bg-black text-white font-bold p-2 rounded-lg mt-3" onClick={handleBuyClick}>Acheter</button>
+                    <button className="bg-black text-white font-bold p-2 rounded mt-3" onClick={handleBuyClick}>Acheter</button>
                 </Section>
                 <Office color={currentColor} />
             </div>
